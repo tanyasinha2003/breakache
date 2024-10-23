@@ -1,32 +1,71 @@
+/* styles/globals.css */
+@import 'normalize.css';
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Livvic';
+  src: url('/public/fonts/Livvic-Regular.woff2') format('woff2'),
+      url('/public/fonts/Livvic-Regular.woff') format('woff'),
+      url('/fonts/Livvic-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Livvic';
+  src: url('/public/fonts/Livvic-Light.woff2') format('woff2'),
+      url('/public/fonts/Livvic-Light.woff') format('woff'),
+      url('/fonts/Livvic-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Livvic';
+  src: url('/public/fonts/Livvic-SemiBold.woff2') format('woff2'),
+      url('/public/fonts/Livvic-SemiBold.woff') format('woff'),
+      url('/fonts/Livvic-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Livvic';
+  src: url('/public/fonts/Livvic-SemiBoldItalic.woff2') format('woff2'),
+      url('/public/fonts/Livvic-SemiBoldItalic.woff') format('woff'),
+      url('/fonts/Livvic-SemiBoldItalic.ttf') format('truetype');
+     
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+:root {
+  --brand-dark-gray: #737373;
+  --brand-red: #ef3d26;
+  --brand-light-gray: #d9d9d9;
+  --font-family: 'Livvic', sans-serif;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family:
-    Inter,
-    -apple-system,
-    BlinkMacSystemFont,
-    Segoe UI,
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    Fira Sans,
-    Droid Sans,
-    Helvetica Neue,
-    sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
+  font-family: var(--font-family);
 }
 
 * {
   box-sizing: border-box;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+a {
+  font-family: var(--font-family); /* Ensure links use the global font */
+  text-decoration: none;
 }
+
