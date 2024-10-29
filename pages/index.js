@@ -5,36 +5,83 @@ import LeftHeart from "../public/images/left-heart.svg";
 import RightHeart from "../public/images/right-heart.svg";
 import { useState, useEffect } from "react";
 import ShareYourStory from "../public/images/share-your-story.png";
-
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 import Layout from "../components/layout";
 import HangingLetter from "../components/hanging-letter";
 
 import stories from "../data/stories";
 import CarouselContent from "../components/carousel-content";
 import Footer from "../components/footer";
-// Load the Livvic font
 
 export default function Home() {
-  const images = [
-    "/images/img-carousel-1.png",
-    "/images/img-carousel-1.png",
-    "/images/img-carousel-1.png",
-    "/images/img-carousel-1.png", // Add your image paths here
-  ];
+ 
+
+  const rightHeartRef = useRef(null);
+  const { scrollYProgress: rightScrollYProgress } = useScroll({
+    target: rightHeartRef,
+    offset: ["start end", "end start"],
+  });
+
+  // Transformations for the right heart
+  const rightHeartX = useTransform(
+    rightScrollYProgress,
+    [0.3, 1],
+    ["0%", "-370%"]
+  );
+  const rightHeartY = useTransform(
+    rightScrollYProgress,
+    [0.2, 1],
+    ["0%", "300%"]
+  );
+  const rightHeartScale = useTransform(rightScrollYProgress, [0, 1], [1, 0.5]);
+
+  // Reference for the left heart
+  const leftHeartRef = useRef(null);
+  const { scrollYProgress: leftScrollYProgress } = useScroll({
+    target: leftHeartRef,
+    offset: ["start end", "end start"],
+  });
+
+  // Transformations for the left heart
+  const leftHeartX = useTransform(leftScrollYProgress, [0.7, 1], ["0%", "40%"]);
+  const leftHeartY = useTransform(
+    leftScrollYProgress,
+    [0.7, 1],
+    ["0%", "700%"]
+  );
+  const leftHeartScale = useTransform(leftScrollYProgress, [0.7, 1], [1, 0.5]);
 
   return (
     <Layout>
-      <main>
+      <main className="overflow-hidden">
         {/* landing page
         the hanging letters 
         share you story button
          */}
-         
 
         <div className="landing-page mb-[8rem] ">
-        <HangingLetter />
-          <Image src={LeftHeart} width={200} className="ml-5" />
-
+          <HangingLetter />
+        
+          <motion.div
+            ref={leftHeartRef}
+            style={{
+              x: leftHeartX, // Start animating when triggered
+              y: leftHeartY,
+              scale: leftHeartScale,
+            }}
+            transition={{
+              ease: [0.42, 0, 0.58, 1], // Cubic bezier for ease-in-out effect
+              duration: 20, // Adjust for slower speed
+            }}
+          >
+            <Image
+              src={LeftHeart}
+              width={200}
+              className="ml-5"
+              alt="Left Heart"
+            />
+          </motion.div>
           <div className="flex flex-col items-end h-[16rem] w-100 mr-[20rem] relative mt-[3rem]">
             <h1 className="text-[8.8rem] font-bold italic font-livvic text-center absolute">
               <span className="text-red">a</span>
@@ -61,7 +108,18 @@ export default function Home() {
               </div>
             </Link>
 
-            <Image src={RightHeart} width={200} className="mr-[2rem]" />
+          
+            <motion.div
+              ref={rightHeartRef}
+              style={{ x: rightHeartX, y: rightHeartY, scale: rightHeartScale }}
+            >
+              <Image
+                src={RightHeart}
+                width={200}
+                className="mr-[2rem]"
+                alt="Right Heart"
+              />
+            </motion.div>
           </div>
         </div>
 
@@ -115,93 +173,7 @@ export default function Home() {
           </h3>
 
           <CarouselContent data={stories} />
-          {/* <div className="carousel-content-container flex mt-[4.5rem] space-x-10">
-            <Carousel images={images} delay={3000}/>
-
-            <div className="content flex flex-col items-start w-[20rem] ">
-              <h3 className="text-[3.1rem]  font-livvic text-left ">
-                <span className="text-red">Career </span>
-                <span className="text-dark-gray">Breaks</span>
-              </h3>
-              <p className="text-left text-[1.25rem] text-dark-gray ">
-                Why do we suffer in silence when we can celebrate, share and
-                even find answers to our heartbreaks.{" "}
-              </p>
-              <Link
-                href="#"
-                className="uppercase text-[0.9rem] text-dark-gray flex mt-[3rem]"
-              >
-                <p className="my-auto mr-2">View All Stories</p>
-                <Image src={arrow} width={40} height={30} />
-              </Link>
-            </div>
-          </div>
-
-          <div className="carousel-content-container flex justify-end mt-[4.5rem] space-x-10">
-            <Carousel images={images}  delay={3200}/>
-
-            <div className="content flex flex-col items-start w-[20rem] ">
-              <h3 className="text-[3.1rem]  font-livvic text-left ">
-                <span className="text-red">Career </span>
-                <span className="text-dark-gray">Breaks</span>
-              </h3>
-              <p className="text-left text-[1.25rem] text-dark-gray ">
-                Why do we suffer in silence when we can celebrate, share and
-                even find answers to our heartbreaks.{" "}
-              </p>
-              <Link
-                href="#"
-                className="uppercase text-[0.9rem] text-dark-gray flex mt-[3rem]"
-              >
-                <p className="my-auto mr-2">View All Stories</p>
-                <Image src={arrow} width={40} height={30} />
-              </Link>
-            </div>
-          </div>
-
-          <div className="carousel-content-container flex mt-[4.5rem] space-x-10">
-            <Carousel images={images} delay={3000} />
-
-            <div className="content flex flex-col items-start w-[20rem] ">
-              <h3 className="text-[3.1rem]  font-livvic text-left ">
-                <span className="text-red">Career </span>
-                <span className="text-dark-gray">Breaks</span>
-              </h3>
-              <p className="text-left text-[1.25rem] text-dark-gray ">
-                Why do we suffer in silence when we can celebrate, share and
-                even find answers to our heartbreaks.{" "}
-              </p>
-              <Link
-                href="#"
-                className="uppercase text-[0.9rem] text-dark-gray flex mt-[3rem]"
-              >
-                <p className="my-auto mr-2">View All Stories</p>
-                <Image src={arrow} width={40} height={30} />
-              </Link>
-            </div>
-          </div>
-
-          <div className="carousel-content-container flex justify-end mt-[4.5rem] space-x-10">
-            <Carousel images={images}  delay={3200}/>
-
-            <div className="content flex flex-col items-start w-[20rem] ">
-              <h3 className="text-[3.1rem]  font-livvic text-left ">
-                <span className="text-red">Career </span>
-                <span className="text-dark-gray">Breaks</span>
-              </h3>
-              <p className="text-left text-[1.25rem] text-dark-gray ">
-                Why do we suffer in silence when we can celebrate, share and
-                even find answers to our heartbreaks.{" "}
-              </p>
-              <Link
-                href="#"
-                className="uppercase text-[0.9rem] text-dark-gray flex mt-[3rem]"
-              >
-                <p className="my-auto mr-2">View All Stories</p>
-                <Image src={arrow} width={40} height={30} />
-              </Link>
-            </div>
-          </div> */}
+        
         </div>
 
         <Footer />

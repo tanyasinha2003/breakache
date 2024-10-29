@@ -1,8 +1,22 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 const HangingLetter = () => {
-  const letters = ['b', 'r', 'e', 'a', 'k'];
-  const colors = ['text-dark-gray', 'text-dark-gray', 'text-dark-gray', 'text-red', 'text-black'];
+  const letters = ["b", "r", "e", "a", "k"];
+  const colors = [
+    "text-dark-gray",
+    "text-dark-gray",
+    "text-dark-gray",
+    "text-red",
+    "text-black",
+  ];
+  // Define unique border radius values for each letter
+  const borderRadiusValues = [
+    "rounded-tl-[3rem] rounded-tr-[4rem] rounded-bl-[2rem] rounded-br-[5rem]",
+    "rounded-tl-[4rem] rounded-tr-[3rem] rounded-bl-[5rem] rounded-br-[2rem]",
+    "rounded-tl-[2rem] rounded-tr-[5rem] rounded-bl-[4rem] rounded-br-[3rem]",
+    "rounded-tl-[5rem] rounded-tr-[2rem] rounded-bl-[3rem] rounded-br-[4rem]",
+    "rounded-tl-[3rem] rounded-tr-[4rem] rounded-bl-[4rem] rounded-br-[3rem]",
+  ];
 
   // Function to generate a random duration and delay for each letter's swing
   const getRandomSwing = () => {
@@ -24,25 +38,27 @@ const HangingLetter = () => {
   };
 
   return (
-    <div className='absolute top-[-15rem] left-[15rem]'>
-    <div className="flex justify-center items-center h-screen relative space-x-12">
-      {letters.map((letter, index) => (
-        <motion.div
-          key={index}
-          className="flex flex-col items-center"
-          variants={getRandomSwing()} // Apply random swing for each letter
-          animate="swing"
-        >
-          {/* The thread/rope */}
-          <div className="w-[1px] h-[20rem] bg-light-gray"></div>
+    <div className="absolute top-[-15rem] left-[15rem]">
+      <div className="flex justify-center items-center h-screen relative space-x-12">
+        {letters.map((letter, index) => (
+          <motion.div
+            key={index}
+            className="flex flex-col items-center"
+            variants={getRandomSwing()} // Apply random swing for each letter
+            animate="swing"
+          >
+            {/* The thread/rope */}
+            <div className="w-[1px] h-[20rem] bg-light-gray"></div>
 
-          {/* Swinging letter */}
-          <div className={`text-[8.8rem] font-bold font-livvic ${colors[index]} text-center border px-[10px]`}>
-            {letter}
-          </div>
-        </motion.div>
-      ))}
-    </div>
+            {/* Swinging letter */}
+            <div
+              className={`text-[8.8rem] font-bold font-livvic ${colors[index]} text-center border px-[10px] ${borderRadiusValues[index]}`}
+            >
+              {letter}
+            </div>
+          </motion.div>
+        ))}
+      </div>
     </div>
   );
 };
