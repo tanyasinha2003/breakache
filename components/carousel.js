@@ -15,7 +15,7 @@ import {
 } from "swiper/modules";
 import Image from "next/image"; // Next.js Image component
 
-export default function Carousel({ images,delay }) {
+export default function Carousel({ images, delay }) {
   return (
     <>
       <Swiper
@@ -36,7 +36,7 @@ export default function Carousel({ images,delay }) {
           delay: delay,
           disableOnInteraction: false,
         }}
-        className="mySwiper2 w-[18rem] h-[23rem]"
+        className="mySwiper2 w-[10rem] h-[12rem] lg:w-[18rem] lg:h-[23rem]"
         loop={true}
         pagination={{
           dynamicBullets: true, // Enable dynamic bullets for pagination
@@ -45,7 +45,7 @@ export default function Carousel({ images,delay }) {
         style={{
           "--swiper-pagination-color": "red", // Custom active color (Tomato color)
           "--swiper-pagination-bullet-inactive-color": "#ffffff", // Inactive bullet color
-          "margin":"0"
+          margin: "0",
         }}
       >
         {images.map((image, index) => (
@@ -53,8 +53,10 @@ export default function Carousel({ images,delay }) {
             <Image
               src={image.src}
               alt={image.alt}
-              width={500} // Specify the width of the image
-              height={300} // Specify the height of the image
+              width={500} // Specify the width for larger screens
+              height={300} // Specify the height for larger screens
+              className="image-cover"
+              layout="responsive"
             />
             {console.log(image)}
           </SwiperSlide>
