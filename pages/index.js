@@ -28,11 +28,13 @@ export default function Home() {
        <Landing />
 
         <div id="aboutUs" className="py-10">
-          <div className="w-[20rem]  lg:w-[26rem] center mx-auto">
+          <div className="w-[20rem]  lg:w-[26rem] center mx-auto pb-[2rem]">
+          <hr className="border-t-2 border-light-gray w-[10%] mx-auto my-[1.5rem] lg:hidden " />
             <p className="text-center text-[1rem] lg:text-[1.25rem] text-dark-gray">
               Why do we suffer in silence when we can celebrate, share and even
               find answers to our heartbreaks.{" "}
             </p>
+            <hr className="border-t-2 border-light-gray w-[10%] mx-auto my-[1.5rem] lg:hidden " />
           </div>
 
           <div className="w-80 ml-[2.5rem] lg:ml-20 mt-10">

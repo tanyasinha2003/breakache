@@ -13,7 +13,7 @@ export default function Footer({ children }) {
       </h4>
 
       <div className="img-container flex justify-center my-[2rem] relative">
-        <Image src={LeftHeart}  className="w-[10rem] lg:w-[12.5rem]"></Image>
+        <Image src={LeftHeart} className="w-[10rem] lg:w-[12.5rem]"></Image>
         <Link href="#" className="my-auto absolute top-[4rem] lg:top-[5rem]">
           tap to join us
         </Link>
@@ -30,21 +30,39 @@ export default function Footer({ children }) {
       </h5>
 
       <div className="links flex space-x-10 text-[0.8rem] lg:text-[1rem] lg:space-x-20 justify-center mb-[2rem]">
-        <Link href="#" className="uppercase">
+        <Link
+          href="https://www.youtube.com/@Breakache"
+          className="uppercase"
+          target="_blank"
+        >
           Youtube
         </Link>
-        <Link href="#" className="uppercase">
-       Instagram
+        <Link
+          href="https://www.instagram.com/breakache2023/"
+          className="uppercase"
+          target="_blank"
+        >
+          Instagram
         </Link>{" "}
-        <Link href="#" className="uppercase">
+        <Link
+          href="https://www.threads.net/@breakache2023"
+          className="uppercase"
+          target="_blank"
+        >
           Threads
         </Link>{" "}
-        <Link href="#" className="uppercase">
+        <Link
+          href="https://www.linkedin.com/showcase/breakache/posts/?feedView=all"
+          className="uppercase"
+          target="_blank"
+        >
           Linkedin
         </Link>
       </div>
 
-      <p className="text-light-gray text-[0.8rem] lg:text-[1rem] text-center mb-[2.5rem]">©2024 Breakache. All rights reserved.</p>
+      <p className="text-light-gray text-[0.8rem] lg:text-[1rem] text-center mb-[2.5rem]">
+        ©2024 Breakache. All rights reserved.
+      </p>
     </div>
   );
 }

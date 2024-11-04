@@ -52,7 +52,7 @@ const HangingLetter = () => {
 
             {/* Swinging letter */}
             <div
-              className={`text-[8.8rem] font-bold font-livvic ${colors[index]} text-center border px-[10px] ${borderRadiusValues[index]}`}
+              className={`text-[8.8rem] font-bold font-livvic ${colors[index]} text-center bg-white border px-[10px] ${borderRadiusValues[index]}`}
             >
               {letter}
             </div>

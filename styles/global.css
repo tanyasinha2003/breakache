@@ -69,3 +69,29 @@ a {
   text-decoration: none;
 }
 
+/* tailwind.css */
+#nav-icon4 span:nth-child(1) {
+  @apply -top-[7px] origin-left;
+}
+
+#nav-icon4 span:nth-child(2) {
+  @apply top-[1px] origin-left;
+}
+
+#nav-icon4 span:nth-child(3) {
+  @apply top-[8px] origin-left;
+}
+
+#nav-icon4.open span:nth-child(1) {
+  @apply rotate-45 translate-x-2 -translate-y-1;
+}
+
+#nav-icon4.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+#nav-icon4.open span:nth-child(3) {
+  @apply -rotate-45 translate-x-2 translate-y-1;
+}
+
