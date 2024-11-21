@@ -14,7 +14,7 @@ export default function Footer({ children }) {
 
       <div className="img-container flex justify-center my-[2rem] relative">
         <Image src={LeftHeart} className="w-[10rem] lg:w-[12.5rem]"></Image>
-        <Link href="#" className="my-auto absolute top-[4rem] lg:top-[5rem]">
+        <Link href="participate" className="my-auto absolute top-[4rem] lg:top-[5rem]">
           tap to join us
         </Link>
 

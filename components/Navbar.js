@@ -78,7 +78,7 @@ export default function Navbar() {
             Stories
           </Link>
           <Link
-            href="/"
+            href="/participate"
             className="black-text uppercase text-right text-l font-light"
           >
             Participate

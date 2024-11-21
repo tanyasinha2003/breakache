@@ -56,7 +56,7 @@ export default function Landing() {
       </motion.div>
 
       <div className="lg:flex justify-between items-center hidden">
-        <Link href="#" passHref>
+        <Link href="participate" passHref>
           <div className="flex flex-col items-center cursor-pointer w-[15rem] h-[6.8rem]">
             <Image
               src={ShareYourStory}
