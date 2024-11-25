@@ -94,7 +94,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }} // Fades in and slides down
             exit={{ opacity: 0, y: -20 }} // Fades out and slides up
             transition={{ duration: 0.3 }} // Sets the speed of the animation
-            className="fixed top-30 right-0 h-[90vh] w-screen bg-white z-20  lg:hidden flex flex-col justify-between"
+            className="fixed top-[7rem] right-0 h-[90vh] w-screen bg-white z-20  lg:hidden flex flex-col justify-between"
           >
             <div className="flex flex-col space-y-4 items-end pr-8 pt-4 items-center pt-[5rem]">
               <Link
