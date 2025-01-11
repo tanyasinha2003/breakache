@@ -1,46 +1,46 @@
 [
   {
     "heading": "Career",
-    "paragraph": "Join us on thrilling adventures across the globe, exploring unknown places and conquering new heights.",
+    "paragraph": "Whatever your journey looks like, it’s time to stop seeing career breaks as setbacks. Instead, let’s celebrate them for the unique experiences they bring.",
     "images": [
       { "src": "/images/img-carousel-1.png", "alt": "Mountain climbers reaching the summit" },
       { "src": "/images/img-carousel-2.png", "alt": "A lone traveler in a vast desert" },
       { "src": "/images/img-carousel-3.png", "alt": "A group of friends kayaking down a river" },
       { "src": "/images/img-carousel-4.png", "alt": "A person bungee jumping off a cliff" }
     ],
-    "button": { "text": "View All Stories", "link": "/stories/adventure" }
+    "button": { "text": "View All Stories", "link": "/stories/career" }
   },
   {
     "heading": "Health",
-    "paragraph": "Reconnect with nature through serene landscapes and breathtaking views in the wild.",
+    "paragraph": "What if one day you could no longer see the world as you do now?\tOr if overwhelming fatigue made it impossible to keep moving forward?",
     "images": [
       { "src": "/images/img-carousel-1.png", "alt": "A waterfall cascading through a dense forest" },
       { "src": "/images/img-carousel-2.png", "alt": "A meadow filled with colorful flowers under the blue sky" },
       { "src": "/images/img-carousel-3.png", "alt": "A serene lake surrounded by mountains" },
       { "src": "/images/img-carousel-4.png", "alt": "A forest trail covered in autumn leaves" }
     ],
-    "button": { "text": "View All Stories", "link": "/stories/nature" }
+    "button": { "text": "View All Stories", "link": "/stories/health" }
   },
   {
     "heading": "Heart",
-    "paragraph": "Immerse yourself in the rich cultures of the world, discovering unique traditions and histories.",
+    "paragraph": "Life doesn’t always follow the script we envision, and love—beautiful, unpredictable love—can sometimes lead us to unexpected heartbreak.",
     "images": [
       { "src": "/images/img-carousel-1.png", "alt": "A traditional festival with people dancing in vibrant costumes" },
       { "src": "/images/img-carousel-2.png", "alt": "Ancient temple architecture against the sunset" },
       { "src": "/images/img-carousel-3.png", "alt": "A cultural market bustling with locals" },
       { "src": "/images/img-carousel-4.png", "alt": "A family celebrating a local festival" }
     ],
-    "button": { "text": "View All Stories", "link": "/stories/culture" }
+    "button": { "text": "View All Stories", "link": "/stories/heart" }
   },
   {
     "heading": "Spiritual",
-    "paragraph": "Explore the bustling cities of the world, where modern life meets ancient history.",
+    "paragraph": "A sudden loss, a profound experience, or even a moment of quiet reflection can lead us to question everything we once took for granted—including our faith and purpose.",
     "images": [
       { "src": "/images/img-carousel-1.png", "alt": "A busy street in a metropolitan city at night" },
       { "src": "/images/img-carousel-2.png", "alt": "A skyline view of a modern city at sunrise" },
       { "src": "/images/img-carousel-3.png", "alt": "A city park filled with people" },
       { "src": "/images/img-carousel-4.png", "alt": "A bridge lit up at night with city lights" }
     ],
-    "button": { "text": "View All Stories", "link": "/stories/urban" }
+    "button": { "text": "View All Stories", "link": "/stories/spiritual" }
   }
 ]
