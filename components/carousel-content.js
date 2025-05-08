@@ -9,7 +9,7 @@ const CarouselContent = ({ data }) => {
       {data.map((item, index) => (
         <div
           key={index}
-          className={`carousel-content-container flex mt-[4rem] lg:mt-[4.5rem] space-x-5 lg:space-x-10 ${
+          className={`carousel-content-container flex mt-[4rem] lg:mt-[4.5rem] space-x-5 lg:space-x-10  ${
             index % 2 === 1
               ? "flex-row-reverse  lg:flex-row lg:justify-end"
               : ""
@@ -35,7 +35,7 @@ const CarouselContent = ({ data }) => {
               <span className="text-dark-gray">Breaks</span>
             </h3>
             <p
-              className={`lg:text-[1.25rem] text-[0.8rem] w-[8rem] text-dark-gray lg:w-[16rem] 
+              className={`lg:text-[1.25rem] text-[0.8rem] w-auto text-dark-gray lg:w-[16rem] pr-[0.5rem]
              ${index % 2 === 1 ? "text-right lg:text-left" : "text-left "}
             `}
             >
@@ -44,13 +44,13 @@ const CarouselContent = ({ data }) => {
             <Link
               href={item.button.link}
               className={`
-            uppercase text-[0.8rem] lg:text-[0.9rem] text-dark-gray flex mt-auto
+            uppercase text-[0.8rem] lg:text-[0.9rem] text-dark-gray flex mt-auto 
             ${index % 2 === 1 ? "flex-row-reverse lg:flex-row" : ""}
             `}
             >
               <p
                 className={`
-              my-auto 
+              my-auto whitespace-nowrap
               ${index % 2 === 1 ? "ml-2 lg:mr-2 lg:ml-0" : "mr-2"}
               `}
               >

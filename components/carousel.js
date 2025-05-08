@@ -36,7 +36,7 @@ export default function Carousel({ images, delay }) {
           delay: delay,
           disableOnInteraction: false,
         }}
-        className="mySwiper2 w-[10rem] h-[12rem] lg:w-[18rem] lg:h-[23rem]"
+        className="mySwiper2 w-[12rem] h-[15rem] lg:w-[18rem] lg:h-[23rem]"
         loop={true}
         pagination={{
           dynamicBullets: true, // Enable dynamic bullets for pagination
@@ -53,10 +53,11 @@ export default function Carousel({ images, delay }) {
             <Image
               src={image.src}
               alt={image.alt}
-              width={500} // Specify the width for larger screens
-              height={300} // Specify the height for larger screens
+              // width={500} // Specify the width for larger screens
+              // height={300} // Specify the height for larger screens
               className="image-cover"
-              layout="responsive"
+              layout="fill"
+              objectFit="cover"
             />
             {console.log(image)}
           </SwiperSlide>

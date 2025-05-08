@@ -29,7 +29,7 @@ export default function Footer({ children }) {
         <span className="text-dark-gray">che</span>
       </h5>
 
-      <div className="links flex space-x-10 text-[0.8rem] lg:text-[1rem] lg:space-x-20 justify-center mb-[2rem]">
+      <div className="links flex space-x-5 text-[0.8rem] lg:text-[1rem] lg:space-x-20 justify-center mb-[2rem]">
         <Link
           href="https://www.youtube.com/@Breakache"
           className="uppercase"

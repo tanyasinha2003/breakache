@@ -20,7 +20,7 @@ export default function Navbar() {
     <div className="sticky top-0 right-0 z-10 bg-white lg:bg-transparent">
       {/* add share your story here */}
       <div className="lg:hidden pl-[2rem]">
-        <Link href="#" passHref>
+        <Link href="participate" passHref>
           <div className="flex flex-col items-center cursor-pointer w-[6rem] h-2 pt-2">
             <Image
               src={ShareYourStory}
@@ -100,13 +100,13 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }} // Fades in and slides down
             exit={{ opacity: 0, y: -20 }} // Fades out and slides up
             transition={{ duration: 0.3 }} // Sets the speed of the animation
-            className="fixed top-[7rem] right-0 h-[90vh] w-screen bg-white z-20  lg:hidden flex flex-col justify-between"
+            className="fixed top-[7rem] right-0 h-[90vh] w-screen bg-white z-20  lg:hidden flex flex-col"
           >
-            <div className="flex flex-col space-y-4 items-end pr-8 pt-4 items-center pt-[5rem]">
+            <div className="flex flex-col space-y-2 items-start items-center ">
               <Link
                 href="#aboutUs"
                 onClick={toggleMenu}
-                className="text-dark-gray text-[4rem] ml-[2rem] lowercase text-right text-l font-light"
+                className="text-dark-gray text-[4rem]  lowercase text-right font-light"
               >
                 About Us
               </Link>
@@ -114,60 +114,63 @@ export default function Navbar() {
               <Link
                 href="#stories"
                 onClick={toggleMenu}
-                className="text-dark-gray text-[4rem] ml-[2rem] lowercase text-right text-l font-light"
+                className="text-dark-gray text-[4rem]  lowercase text-right font-light"
               >
                 Stories
               </Link>
               <hr className="border-t-2 border-light-gray w-[10%] mx-auto my-[1.5rem] " />
               <Link
-                href="/"
+                href="/participate"
                 onClick={toggleMenu}
-                className="text-dark-gray text-[4rem] ml-[2rem] lowercase text-right text-l font-light"
+                className="text-dark-gray text-[4rem]  lowercase text-right font-light"
               >
                 Participate
               </Link>
             </div>
-            <div>
+            <div className=" flex flex-col items-start items-center relative">
               <Image
                 src={Logo}
                 alt="logo"
-                height={400}
-                className="absolute bottom-0 left-5 -z-10"
+                height={200}
+                className="absolute top-[-2rem]"
               />
-              <div className="links flex space-x-10 text-[0.8rem] lg:text-[1rem] lg:space-x-20 justify-center mb-[2rem] ">
-                <Link
-                  href="https://www.youtube.com/@Breakache"
-                  className="uppercase"
-                  target="_blank"
-                >
-                  Youtube
-                </Link>
-                <Link
-                  href="https://www.instagram.com/breakache2023/"
-                  className="uppercase"
-                  target="_blank"
-                >
-                  Instagram
-                </Link>{" "}
-                <Link
-                  href="https://www.threads.net/@breakache2023"
-                  className="uppercase"
-                  target="_blank"
-                >
-                  Threads
-                </Link>{" "}
-                <Link
-                  href="https://www.linkedin.com/showcase/breakache/posts/?feedView=all"
-                  className="uppercase"
-                  target="_blank"
-                >
-                  Linkedin
-                </Link>
-              </div>
 
-              <p className="text-white text-[0.8rem] lg:text-[1rem] text-center mb-[2.5rem] ">
-                ©2024 Breakache. All rights reserved.
-              </p>
+              <div className="pt-[8rem]">
+                <div className="links flex space-x-5 text-[0.8rem] lg:text-[1rem] lg:space-x-20 justify-center mb-[2rem] ">
+                  <Link
+                    href="https://www.youtube.com/@Breakache"
+                    className="uppercase"
+                    target="_blank"
+                  >
+                    Youtube
+                  </Link>
+                  <Link
+                    href="https://www.instagram.com/breakache2023/"
+                    className="uppercase"
+                    target="_blank"
+                  >
+                    Instagram
+                  </Link>{" "}
+                  <Link
+                    href="https://www.threads.net/@breakache2023"
+                    className="uppercase"
+                    target="_blank"
+                  >
+                    Threads
+                  </Link>{" "}
+                  <Link
+                    href="https://www.linkedin.com/showcase/breakache/posts/?feedView=all"
+                    className="uppercase"
+                    target="_blank"
+                  >
+                    Linkedin
+                  </Link>
+                </div>
+
+                <p className="text-light-gray text-[0.8rem] lg:text-[1rem] text-center mb-[2.5rem] ">
+                  ©2024 Breakache. All rights reserved.
+                </p>
+              </div>
             </div>
           </motion.div>
         )}

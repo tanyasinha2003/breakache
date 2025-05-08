@@ -82,8 +82,8 @@ export default function Home() {
           </div>
         </div>
 
-        <div id="stories" className="mx-10 lg:mx-20 py-10">
-          <h3 className="uppercase font-bold text-dark-gray text-xl">
+        <div id="stories" className=" lg:mx-20 py-10">
+          <h3 className=" mx-10 uppercase font-bold text-dark-gray text-xl">
             Episodes Captured
           </h3>
 
