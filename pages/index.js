@@ -42,7 +42,7 @@ export default function Home() {
               <span className="text-red">w</span>
               <span className="text-dark-gray">hat</span>
             </h2>
-            <p className="text-left text-[1rem] w-[16rem] lg:w-[20rem] lg:text-[1.25rem] text-dark-gray">
+            <p className="text-left text-[1rem] w-[16rem] lg:w-[20rem] lg:text-[1.25rem] text-dark-gray font-thin">
               Breakache is a show where people share their stories about their
               heart break in love, career break, health break and spiritual
               shift that might have changed their path of life.
@@ -61,7 +61,7 @@ export default function Home() {
               <span className="text-red">w</span>
               <span className="text-dark-gray">hy</span>
             </h2>
-            <p className=" text-right text-[1rem]  lg:text-[1.25rem] text-dark-gray">
+            <p className=" text-right text-[1rem]  lg:text-[1.25rem] text-dark-gray font-thin">
               Breakache is for the braveheart who are not afraid to say the
               truth about their suffering. But, in a way that is entertaining,
               educational and share worthy. The show is helping people to

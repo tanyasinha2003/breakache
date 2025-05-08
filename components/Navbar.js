@@ -66,13 +66,13 @@ export default function Navbar() {
         {/* Links for desktop */}
         <div className="hidden lg:flex flex-col space-y-4 justify-content-end pr-16">
           <Link
-            href="#aboutUs"
+            href="/#aboutUs"
             className="black-text uppercase text-right text-l font-light"
           >
             About Us
           </Link>
           <Link
-            href="#stories"
+            href="/#stories"
             className="black-text uppercase text-right text-l font-light"
           >
             Stories
@@ -82,6 +82,12 @@ export default function Navbar() {
             className="black-text uppercase text-right text-l font-light"
           >
             Participate
+          </Link>
+          <Link
+            href="/socials"
+            className="black-text uppercase text-right text-l font-light"
+          >
+            Socials
           </Link>
         </div>
       </div>
@@ -129,16 +135,32 @@ export default function Navbar() {
                 className="absolute bottom-0 left-5 -z-10"
               />
               <div className="links flex space-x-10 text-[0.8rem] lg:text-[1rem] lg:space-x-20 justify-center mb-[2rem] ">
-                <Link href="https://www.youtube.com/@Breakache" className="uppercase" target="_blank">
+                <Link
+                  href="https://www.youtube.com/@Breakache"
+                  className="uppercase"
+                  target="_blank"
+                >
                   Youtube
                 </Link>
-                <Link href="https://www.instagram.com/breakache2023/" className="uppercase" target="_blank">
+                <Link
+                  href="https://www.instagram.com/breakache2023/"
+                  className="uppercase"
+                  target="_blank"
+                >
                   Instagram
                 </Link>{" "}
-                <Link href="https://www.threads.net/@breakache2023" className="uppercase" target="_blank">
+                <Link
+                  href="https://www.threads.net/@breakache2023"
+                  className="uppercase"
+                  target="_blank"
+                >
                   Threads
                 </Link>{" "}
-                <Link href="https://www.linkedin.com/showcase/breakache/posts/?feedView=all" className="uppercase" target="_blank">
+                <Link
+                  href="https://www.linkedin.com/showcase/breakache/posts/?feedView=all"
+                  className="uppercase"
+                  target="_blank"
+                >
                   Linkedin
                 </Link>
               </div>
