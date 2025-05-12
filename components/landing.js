@@ -86,29 +86,22 @@ export default function Landing() {
       </div>
 
       {/* Mobile Layout */}
-      <div className="block lg:hidden text-center mt-[2rem]">
-      <HangingLetter />
-        {/* Left and Right Hearts centered above the text */}
-        {/* <div className="flex justify-center mb-4 ">
-          <Image src={LeftHeart} width={100} alt="Left Heart" />
-          <Image src={RightHeart} width={100} alt="Right Heart" />
-        </div> */}
+      <div className="block lg:hidden text-center mt-[2rem] flex flex-col items-between ">
+    
+          <HangingLetter />
+       
 
         {/* Mobile Heading */}
         <div className="relative mt-[13rem]">
-        <h1 className="text-[3rem] font-extrabold font-livvic lowercase italic ">
-          {/* <span className="text-dark-gray">bre</span>
-          <span className="text-red">a</span>
-          <span className="text-black">k</span> */}
-          <span className="text-red">a</span>
-          <span className="text-dark-gray">che</span>
-        </h1>
-        
-        <p className="text-[1rem] text-dark-gray mt-[1rem] tracking-[3px]">
-          Not all breakups are bad
-        </p>
+          <h1 className="text-[3rem] font-extrabold font-livvic lowercase italic ">
+            <span className="text-red">a</span>
+            <span className="text-dark-gray">che</span>
+          </h1>
+
+          <p className="text-[1rem] text-dark-gray mt-[1rem] tracking-[3px]">
+            Not all breakups are bad
+          </p>
         </div>
-      
       </div>
     </div>
   );

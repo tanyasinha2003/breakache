@@ -38,8 +38,8 @@ const HangingLetter = () => {
   };
 
   return (
-    <div className="absolute top-[-10rem] left-[1.8rem] lg:top-[-15rem] lg:left-[15rem]">
-      <div className="flex justify-center items-center h-screen relative space-x-5  lg:space-x-10">
+    <div className="absolute top-[3rem] left-[1.8rem] md:left-[18rem] lg:top-[-15rem] lg:left-[15rem]">
+      <div className="flex justify-center items-center lg:h-screen relative space-x-5  lg:space-x-10">
         {letters.map((letter, index) => (
           <motion.div
             key={index}
