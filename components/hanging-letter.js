@@ -38,8 +38,8 @@ const HangingLetter = () => {
   };
 
   return (
-    <div className="absolute top-[-15rem] left-[15rem]">
-      <div className="flex justify-center items-center h-screen relative space-x-12">
+    <div className="absolute top-[-10rem] left-[1.8rem] lg:top-[-15rem] lg:left-[15rem]">
+      <div className="flex justify-center items-center h-screen relative space-x-5  lg:space-x-10">
         {letters.map((letter, index) => (
           <motion.div
             key={index}
@@ -48,11 +48,11 @@ const HangingLetter = () => {
             animate="swing"
           >
             {/* The thread/rope */}
-            <div className="w-[1px] h-[20rem] bg-light-gray"></div>
+            <div className="w-[1px]  h-[15rem] lg:h-[20rem] bg-light-gray"></div>
 
             {/* Swinging letter */}
             <div
-              className={`text-[8.8rem] font-bold font-livvic ${colors[index]} text-center bg-white border px-[10px] ${borderRadiusValues[index]}`}
+              className={`text-[3rem]  lg:text-[8.8rem] font-bold font-livvic ${colors[index]} text-center bg-white border px-[10px] ${borderRadiusValues[index]}`}
             >
               {letter}
             </div>

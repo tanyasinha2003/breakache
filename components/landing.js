@@ -28,7 +28,7 @@ export default function Landing() {
   const rightHeartScale = useTransform(rightScrollYProgress, [0, 1], [1, 0.5]);
 
   return (
-    <div className="landing-page mb-[4rem] ">
+    <div className="landing-page lg:mb-[4rem] ">
       <div className="lg:block hidden">
         <HangingLetter />
       </div>
@@ -87,22 +87,24 @@ export default function Landing() {
 
       {/* Mobile Layout */}
       <div className="block lg:hidden text-center mt-[2rem]">
+      <HangingLetter />
         {/* Left and Right Hearts centered above the text */}
-        <div className="flex justify-center mb-4 ">
+        {/* <div className="flex justify-center mb-4 ">
           <Image src={LeftHeart} width={100} alt="Left Heart" />
           <Image src={RightHeart} width={100} alt="Right Heart" />
-        </div>
+        </div> */}
 
         {/* Mobile Heading */}
-        <div className="relative">
-        <h1 className="text-[3.5rem] font-extrabold font-livvic uppercase">
-          <span className="text-dark-gray">bre</span>
+        <div className="relative mt-[13rem]">
+        <h1 className="text-[3rem] font-extrabold font-livvic lowercase italic ">
+          {/* <span className="text-dark-gray">bre</span>
           <span className="text-red">a</span>
-          <span className="text-black">k</span>
+          <span className="text-black">k</span> */}
           <span className="text-red">a</span>
           <span className="text-dark-gray">che</span>
         </h1>
-        <p className="text-[1rem] text-dark-gray absolute -bottom-3 left-[5.6rem] tracking-[3px]">
+        
+        <p className="text-[1rem] text-dark-gray mt-[1rem] tracking-[3px]">
           Not all breakups are bad
         </p>
         </div>
