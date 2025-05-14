@@ -5,8 +5,9 @@
     "images": [
       { "src": "/images/img-carousel-1.png", "alt": "Mountain climbers reaching the summit" },
       { "src": "/images/img-carousel-2.png", "alt": "A lone traveler in a vast desert" },
-      { "src": "/images/img-carousel-3.png", "alt": "A group of friends kayaking down a river" },
-      { "src": "/images/img-carousel-4.png", "alt": "A person bungee jumping off a cliff" }
+      { "src": "/images/img-carousel-9.png", "alt": "A group of friends kayaking down a river" },
+      { "src": "/images/img-carousel-7.png", "alt": "A person bungee jumping off a cliff" },
+      { "src": "/images/img-carousel-11.png", "alt": "A person bungee jumping off a cliff" }
     ],
     "button": { "text": "View All Stories", "link": "/stories/career" }
   },
@@ -14,10 +15,9 @@
     "heading": "Health",
     "paragraph": "What if one day you could no longer see the world as you do now?\tOr if overwhelming fatigue made it impossible to keep moving forward?",
     "images": [
-      { "src": "/images/img-carousel-1.png", "alt": "A waterfall cascading through a dense forest" },
-      { "src": "/images/img-carousel-2.png", "alt": "A meadow filled with colorful flowers under the blue sky" },
-      { "src": "/images/img-carousel-3.png", "alt": "A serene lake surrounded by mountains" },
-      { "src": "/images/img-carousel-4.png", "alt": "A forest trail covered in autumn leaves" }
+      { "src": "/images/img-carousel-4.png", "alt": "A waterfall cascading through a dense forest" },
+      { "src": "/images/img-carousel-6.png", "alt": "A meadow filled with colorful flowers under the blue sky" }
+      
     ],
     "button": { "text": "View All Stories", "link": "/stories/health" }
   },
@@ -25,10 +25,9 @@
     "heading": "Heart",
     "paragraph": "Life doesn’t always follow the script we envision, and love—beautiful, unpredictable love—can sometimes lead us to unexpected heartbreak.",
     "images": [
-      { "src": "/images/img-carousel-1.png", "alt": "A traditional festival with people dancing in vibrant costumes" },
-      { "src": "/images/img-carousel-2.png", "alt": "Ancient temple architecture against the sunset" },
-      { "src": "/images/img-carousel-3.png", "alt": "A cultural market bustling with locals" },
-      { "src": "/images/img-carousel-4.png", "alt": "A family celebrating a local festival" }
+      { "src": "/images/img-carousel-8.png", "alt": "Ancient temple architecture against the sunset" },
+      { "src": "/images/img-carousel-5.png", "alt": "A cultural market bustling with locals" },
+      { "src": "/images/img-carousel-3.png", "alt": "A family celebrating a local festival" }
     ],
     "button": { "text": "View All Stories", "link": "/stories/heart" }
   },
@@ -36,10 +35,8 @@
     "heading": "Spiritual",
     "paragraph": "A sudden loss, a profound experience, or even a moment of quiet reflection can lead us to question everything we once took for granted—including our faith and purpose.",
     "images": [
-      { "src": "/images/img-carousel-1.png", "alt": "A busy street in a metropolitan city at night" },
-      { "src": "/images/img-carousel-2.png", "alt": "A skyline view of a modern city at sunrise" },
-      { "src": "/images/img-carousel-3.png", "alt": "A city park filled with people" },
-      { "src": "/images/img-carousel-4.png", "alt": "A bridge lit up at night with city lights" }
+      { "src": "/images/img-carousel-12.png", "alt": "A skyline view of a modern city at sunrise" }
+     
     ],
     "button": { "text": "View All Stories", "link": "/stories/spiritual" }
   }
