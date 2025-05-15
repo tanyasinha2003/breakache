@@ -14,9 +14,10 @@ import stories from "../data/stories";
 import CarouselContent from "../components/carousel-content";
 import Footer from "../components/footer";
 import Landing from "../components/landing";
+import landingImg from "../public/images/landing-img.png";
+import landingImgLg from "../public/images/landing-img-lg.png";
 
 export default function Home() {
-
   return (
     <Layout>
       <main className="overflow-hidden">
@@ -25,17 +26,26 @@ export default function Home() {
         share you story button
          */}
 
-       <Landing />
+        <Landing />
 
         <div id="aboutUs" className="py-10">
           <div className="w-[20rem]  lg:w-[26rem] center mx-auto pb-[2rem]">
-          <hr className="border-t-2 border-light-gray w-[10%] mx-auto my-[1.5rem] lg:hidden " />
+            <hr className="border-t-2 border-light-gray w-[10%] mx-auto my-[1.5rem] lg:hidden " />
             <p className="text-center text-[1rem] lg:text-[1.25rem] text-dark-gray">
               Why do we suffer in silence when we can celebrate, share and even
               find answers to our heartbreaks.{" "}
             </p>
             <hr className="border-t-2 border-light-gray w-[10%] mx-auto my-[1.5rem] lg:hidden " />
           </div>
+
+          <div className="my-[3rem] lg:hidden">
+            <Image src={landingImg} />
+          </div>
+
+          <div className="my-[3rem] md:block hidden">
+            <Image src={landingImgLg} />
+          </div>
+
 
           <div className="w-80 ml-[2.5rem] lg:ml-20 mt-10">
             <h2 className=" text-[3rem] lg:text-[5.6rem] text-left font-bold italic font-livvic ">
