@@ -20,7 +20,7 @@ export default function Navbar() {
     <div className="sticky top-0 right-0 z-10 bg-white lg:bg-transparent">
       {/* add share your story here */}
       <div className="lg:hidden pl-[2rem]">
-        <Link href="participate" passHref>
+        <Link href="/participate" passHref>
           <div className="flex flex-col items-center cursor-pointer w-[6rem] h-2 pt-2">
             <Image
               src={ShareYourStory}
@@ -104,7 +104,7 @@ export default function Navbar() {
           >
             <div className="flex flex-col space-y-2 items-start items-center ">
               <Link
-                href="#aboutUs"
+                href="/#aboutUs"
                 onClick={toggleMenu}
                 className="text-dark-gray text-[4rem]  lowercase text-right font-light"
               >
@@ -112,7 +112,7 @@ export default function Navbar() {
               </Link>
               <hr className="border-t-2 border-light-gray  w-[10%] mx-auto my-[1.5rem] " />
               <Link
-                href="#stories"
+                href="/#stories"
                 onClick={toggleMenu}
                 className="text-dark-gray text-[4rem]  lowercase text-right font-light"
               >

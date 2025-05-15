@@ -1,0 +1,25 @@
+[
+  [
+    { "id": 1, "name": "Abhiroopa Mathur", "img": "/images/img-carousel-1.png" },
+    { "id": 2, "name": "Sushmendra Dubey", "img": "/images/img-carousel-2.png" },
+    { "id": 3, "name": "Preeti Singla", "img": "/images/img-carousel-9.png" },
+    { "id": 4, "name": "Shivanee Dutt", "img": "/images/img-carousel-7.png" },
+     { "id": 4, "name": "Prabhat Bhattacharya", "img": "/images/img-carousel-11.png" },
+     { "id": 4, "name": "Rohit Sharma", "img": "/images/img-carousel-10.png" }
+  ],
+  [
+    { "id": 1, "name": "Deepak Bansal", "img": "/images/img-carousel-4.png" },
+    { "id": 2, "name": "Soumitra Karnik", "img": "/images/img-carousel-6.png" }
+  
+  ],
+  [
+    { "id": 1, "name": "Ritika Kumar", "img": "/images/img-carousel-8.png" },
+    { "id": 2, "name": "Palash Goorha", "img": "/images/img-carousel-5.png" },
+    { "id": 3, "name": "Aparajita Jha", "img": "/images/img-carousel-3.png" }
+   
+  ],
+  [
+    { "id": 1, "name": "Viral Pandya", "img": "/images/img-carousel-12.png" }
+   
+  ]
+]

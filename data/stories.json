@@ -7,7 +7,8 @@
       { "src": "/images/img-carousel-2.png", "alt": "A lone traveler in a vast desert" },
       { "src": "/images/img-carousel-9.png", "alt": "A group of friends kayaking down a river" },
       { "src": "/images/img-carousel-7.png", "alt": "A person bungee jumping off a cliff" },
-      { "src": "/images/img-carousel-11.png", "alt": "A person bungee jumping off a cliff" }
+      { "src": "/images/img-carousel-11.png", "alt": "A person bungee jumping off a cliff" },
+      { "src": "/images/img-carousel-10.png", "alt": "A person bungee jumping off a cliff" }
     ],
     "button": { "text": "View All Stories", "link": "/stories/career" }
   },
