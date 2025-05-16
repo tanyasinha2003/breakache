@@ -6,6 +6,7 @@ export default function Participate() {
   const router = useRouter();
 
   const [step, setStep] = useState(0); // Step 0 for intro screen
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     email: "",
     age: "",
@@ -61,7 +62,7 @@ export default function Participate() {
   const handleSubmit = async (e) => {
     console.log("here");
     e.preventDefault();
-
+    setLoading(true);
     // Ensure final step is valid before submitting
     if (!isStepValid()) {
       alert("Please fill out this field before submitting.");
@@ -74,6 +75,7 @@ export default function Participate() {
       body: JSON.stringify(formData),
     });
     if (res.ok) {
+      setLoading(false);
       router.push("/thankyou");
     }
   };
@@ -301,9 +303,38 @@ export default function Participate() {
                 }}
                 transition={{ type: "spring", stiffness: 300 }}
                 type="submit"
-                className="ml-auto bg-red text-white px-6 py-3 rounded-lg "
+                disabled={loading}
+                className={`ml-auto px-6 py-3 rounded-lg flex items-center justify-center gap-2
+    ${loading ? "border cursor-not-allowed" : "bg-red text-white"}
+  `}
               >
-                Submit
+                {loading ? (
+                  <>
+                    <svg
+                      className="w-5 h-5 animate-spin text-red"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle
+                        className="opacity-25"
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        strokeWidth="4"
+                      ></circle>
+                      <path
+                        className="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                      ></path>
+                    </svg>
+                    Loading...
+                  </>
+                ) : (
+                  "Submit"
+                )}
               </motion.button>
             )}
           </div>

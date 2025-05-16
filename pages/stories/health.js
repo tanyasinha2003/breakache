@@ -19,7 +19,7 @@ export default function Health() {
           paragraphs={healthBreakSection.paragraphs}
         />
  <BreaksBySection category="HEALTH" names={names[1]}/>
-        <Footer />
+      
       </Layout>
     </>
   );

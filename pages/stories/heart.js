@@ -20,7 +20,7 @@ export default function Heart() {
           paragraphs={heartBreakSection.paragraphs}
         />
  <BreaksBySection category="HEART" names={names[2]}/>
-        <Footer />
+      
       </Layout>
     </>
   );

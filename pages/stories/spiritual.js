@@ -6,7 +6,7 @@ import BreaksBySection from "../../components/breaks-by-section";
 
 import storypage from "../../data/story-page.json";
 
-import names from "../../data/names.json"
+import names from "../../data/names.json";
 
 export default function Spiritual() {
   const spiritualBreakSection = storypage[3]; // or whatever index it is
@@ -19,8 +19,7 @@ export default function Spiritual() {
           title={spiritualBreakSection.title}
           paragraphs={spiritualBreakSection.paragraphs}
         />
- <BreaksBySection category="SPIRITUAL" names={names[3]}/>
-        <Footer />
+        <BreaksBySection category="SPIRITUAL" names={names[3]} />
       </Layout>
     </>
   );

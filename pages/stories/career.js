@@ -22,7 +22,7 @@ export default function Career() {
         <BreaksBySection category="CAREER" names={names[0]}/>
 
       
-        <Footer />
+    
       </Layout>
     </>
   );

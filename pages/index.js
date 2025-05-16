@@ -100,7 +100,7 @@ export default function Home() {
           <CarouselContent data={stories} />
         </div>
 
-        <Footer />
+       
       </main>
     </Layout>
   );

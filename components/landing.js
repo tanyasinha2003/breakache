@@ -71,9 +71,9 @@ export default function Landing() {
           </div>
         </Link>
 
-        <motion.div
-          ref={rightHeartRef}
-          style={{ x: rightHeartX, y: rightHeartY, scale: rightHeartScale }}
+        <div
+          // ref={rightHeartRef}
+          // style={{ x: rightHeartX, y: rightHeartY, scale: rightHeartScale }}
           className="lg:block hidden"
         >
           <Image
@@ -82,14 +82,12 @@ export default function Landing() {
             className="mr-[2rem]"
             alt="Right Heart"
           />
-        </motion.div>
+        </div>
       </div>
 
       {/* Mobile Layout */}
       <div className="block lg:hidden text-center mt-[2rem] flex flex-col items-between ">
-    
-          <HangingLetter />
-       
+        <HangingLetter />
 
         {/* Mobile Heading */}
         <div className="relative mt-[13rem]">

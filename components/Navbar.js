@@ -65,8 +65,14 @@ export default function Navbar() {
 
         {/* Links for desktop */}
         <div className="hidden lg:flex flex-col space-y-4 justify-content-end pr-16">
+        <Link
+            href="/"
+            className="black-text uppercase text-right text-l font-light"
+          >
+            Home
+          </Link>
           <Link
-            href="/#aboutUs"
+            href="/aboutus"
             className="black-text uppercase text-right text-l font-light"
           >
             About Us
@@ -103,10 +109,18 @@ export default function Navbar() {
             className="fixed top-[7rem] right-0 h-[90vh] w-screen bg-white z-20  lg:hidden flex flex-col"
           >
             <div className="flex flex-col space-y-2 items-start items-center ">
-              <Link
-                href="/#aboutUs"
+            <Link
+                href="/"
                 onClick={toggleMenu}
-                className="text-dark-gray text-[4rem]  lowercase text-right font-light"
+                className="text-dark-gray text-[3rem]  lowercase text-right font-light"
+              >
+                home
+              </Link>
+              <hr className="border-t-2 border-light-gray  w-[10%] mx-auto my-[1.5rem] " />
+              <Link
+                href="/aboutus"
+                onClick={toggleMenu}
+                className="text-dark-gray text-[3rem]  lowercase text-right font-light"
               >
                 About Us
               </Link>
@@ -114,7 +128,7 @@ export default function Navbar() {
               <Link
                 href="/#stories"
                 onClick={toggleMenu}
-                className="text-dark-gray text-[4rem]  lowercase text-right font-light"
+                className="text-dark-gray text-[3rem]  lowercase text-right font-light"
               >
                 Stories
               </Link>
@@ -122,7 +136,7 @@ export default function Navbar() {
               <Link
                 href="/participate"
                 onClick={toggleMenu}
-                className="text-dark-gray text-[4rem]  lowercase text-right font-light"
+                className="text-dark-gray text-[3rem]  lowercase text-right font-light"
               >
                 Participate
               </Link>
