@@ -2,11 +2,19 @@ import Layout from "../components/layout";
 import Image from "next/image";
 
 import founder from "../public/images/founder.jpeg";
+import heart from "../public/images/join-us-heart.png";
+
 
 export default function AboutUs() {
   return (
     <>
       <Layout>
+        <div className="lg:mx-[6.5rem] mx-[2rem] flex items-center gap-2">
+          <h1 className="uppercase text-dark-gray font-bold text-lg md:text-xl">
+            About Us
+          </h1>
+          <Image src={heart} width={50} height={50} alt="Heart" />
+        </div>
         <div className="max-w-7xl mx-[auto] p-4 md:p-6 lg:p-8">
           <div className="flex flex-col md:flex-row gap-8 items-start">
             {/* Image container - larger and responsive */}
@@ -70,6 +78,78 @@ export default function AboutUs() {
             </div>
           </div>
         </div>
+
+        <section className="px-6 md:px-16 py-12 bg-white text-gray-800">
+        
+          <div className="flex flex-col md:flex-row w-full h-[40vh] lg:space-x-10 lg:space-y-0 space-y-10 mb-[4rem]">
+            {/* Left Box */}
+            <div className="flex-1 flex items-center justify-center rounded-[3rem] bg-gray-100">
+              <h1 className="text-4xl md:text-6xl font-bold ">
+                Break<span className="text-red">ache</span>
+              </h1>
+            </div>
+
+            {/* Right Box */}
+            <div className="flex-1 flex items-center justify-center rounded-[3rem] bg-gray-100">
+              <h1 className="text-4xl md:text-6xl font-bold text-black">
+                Break<span className="text-red">अच्छे</span>
+              </h1>
+            </div>
+          </div>
+
+          <div className="max-w-5xl mx-auto flex flex-col lg:flex-row items-start gap-10">
+            {/* Text Content */}
+            <div className="w-full  space-y-6 text-lg leading-relaxed">
+              <p className="italic text-gray-600 text-xl">
+                Not all breakups are bad.
+              </p>
+
+              <p>
+                <span className="font-semibold">Breakache</span> (or Break Ache
+                in Hindi) is more than just a podcast. It’s a{" "}
+                <span className="italic">pro bono</span> effort to understand
+                the raw, unfiltered stories of people — their heartbreaks,
+                career journeys, health breaks, spiritual breaks, breakthroughs,
+                and everything in between.
+              </p>
+
+              <p>
+                It’s a way for me to reconnect with those who’ve shaped my
+                journey — to say thank you, to learn again, and maybe to heal a
+                little. Because I’ve realized: there’s no “right” way to live.
+                No perfect timing. No guaranteed blueprint.
+              </p>
+
+              <p>
+                The world keeps moving — whether you take that break or not. But
+                the break? It can change everything within you.
+              </p>
+
+              <p>
+                In a world obsessed with chasing people, things, success —{" "}
+                <strong>BREAKACHE</strong> is about chasing nothing. Just
+                sitting. Listening. Feeling.
+              </p>
+
+              <p>
+                And remembering that it’s okay to pause. <br></br>To ache{" "}
+                <span className="italic">(GOOD THINGS)</span>. <br></br>To
+                break.<br></br> Because sometimes, the only way back... is by
+                stepping away.
+              </p>
+
+              <p className="mt-4">
+                <a
+                  href="mailto:yourbreakache@gmail.com"
+                  className="inline-block font-medium text-red hover:underline hover:text-pink-700 transition"
+                >
+                  Write to me
+                </a>{" "}
+                if you would like to share your story.
+              </p>
+            </div>
+          </div>
+        </section>
       </Layout>
     </>
   );
