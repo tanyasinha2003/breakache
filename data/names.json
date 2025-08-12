@@ -1,25 +1,130 @@
 [
   [
-    { "id": 1, "name": "Abhiroopa Mathur", "img": "/images/img-carousel-1.png" },
-    { "id": 2, "name": "Sushmendra Dubey", "img": "/images/img-carousel-2.png" },
-    { "id": 3, "name": "Preeti Singla", "img": "/images/img-carousel-9.png" },
-    { "id": 4, "name": "Shivanee Dutt", "img": "/images/img-carousel-7.png" },
-     { "id": 4, "name": "Prabhat Bhattacharya", "img": "/images/img-carousel-11.png" },
-     { "id": 4, "name": "Rohit Sharma", "img": "/images/img-carousel-10.png" }
+    {
+      "id": 1,
+      "name": "Abhiroopa Mathur",
+      "img": "/images/img-carousel-1.png",
+      "link": "/stories/career/abhiroopamathur",
+      "role": "Career Coach",
+      "ig": "https://www.instagram.com/reel/C_ABCjxB8g7/",
+      "yt": "https://www.youtube.com/embed/JG5fKLcQl9A?si=BLT3qmaNUcFWtZd2",
+      "desc": "Inspiring professional sharing career growth tips and personal success stories."
+    },
+    {
+      "id": 2,
+      "name": "Sushmendra Dubey",
+      "img": "/images/img-carousel-2.png",
+      "link": "/stories/career/sushmendradubey",
+      "role": "HR Consultant",
+      "ig": "https://www.instagram.com/reel/C_rpAVyh2Az/",
+      "yt": "https://www.youtube.com/embed/sAFEsOAJXMA?si=D9Tg3s8Rqs8nrovA",
+      "desc": "Expert in recruitment strategies and workplace culture building."
+    },
+    {
+      "id": 3,
+      "name": "Preeti Singla",
+      "img": "/images/img-carousel-9.png",
+      "link": "/stories/career/preetisingla",
+      "role": "Entrepreneur",
+      "ig": "https://www.instagram.com/reel/Cv4pVmBuDKJ/",
+      "yt": "https://www.youtube.com/embed/OmyPAP9I43Y?si=j62EzcaLE7ftyLKh",
+      "desc": "Founder and mentor helping women launch and scale their businesses."
+    },
+    {
+      "id": 4,
+      "name": "Shivanee Dutt",
+      "img": "/images/img-carousel-7.png",
+      "link": "/stories/career/shivaneedutt",
+      "role": "Corporate Trainer",
+      "ig": "https://www.instagram.com/reel/CwVicf5t58a/",
+      "yt": "https://www.youtube.com/embed/ownOzDJT3-k?si=FE1PKcYy4f9yBZZh",
+      "desc": "Empowering professionals through leadership and skill development programs."
+    },
+    {
+      "id": 5,
+      "name": "Prabhat Bhattacharya",
+      "img": "/images/img-carousel-11.png",
+      "link": "/stories/career/prabhatbhattacharya",
+      "role": "Software Architect",
+      "ig": "https://www.instagram.com/reel/CvooofwP6Et/",
+      "yt": "",
+      "desc": "Designing cutting-edge software solutions for global enterprises."
+    },
+    {
+      "id": 6,
+      "name": "Rohit Sharma",
+      "img": "/images/img-carousel-10.png",
+      "link": "/stories/career/rohitsharma",
+      "role": "Marketing Strategist",
+      "ig": "https://www.instagram.com/reel/C_9tm7phZe6/",
+      "yt": "https://www.youtube.com/embed/74He8lTV17I?si=CcXUMXuXRP2zueQh",
+      "desc": "Driving brand growth through innovative digital marketing campaigns."
+    }
   ],
   [
-    { "id": 1, "name": "Deepak Bansal", "img": "/images/img-carousel-4.png" },
-    { "id": 2, "name": "Soumitra Karnik", "img": "/images/img-carousel-6.png" }
-  
+    {
+      "id": 1,
+      "name": "Deepak Bansal",
+      "img": "/images/img-carousel-4.png",
+      "link": "/stories/health/deepakbansal",
+      "role": "Nutrition Expert",
+      "ig": "https://www.instagram.com/reel/CxrpEkwpwX8/",
+      "yt": "",
+      "desc": "Helping people achieve healthier lifestyles through nutrition guidance."
+    },
+    {
+      "id": 2,
+      "name": "Soumitra Karnik",
+      "img": "/images/img-carousel-6.png",
+      "link": "/stories/health/soumitrakarnik",
+      "role": "Fitness Coach",
+      "ig": "https://www.instagram.com/reel/DDy_dwMhcoB/",
+      "yt": "https://www.youtube.com/embed/bfX-yp1ABdY?si=-MsjBHFd0aFCTaba",
+      "desc": "Guiding individuals to reach peak physical performance."
+    }
   ],
   [
-    { "id": 1, "name": "Ritika Kumar", "img": "/images/img-carousel-8.png" },
-    { "id": 2, "name": "Palash Goorha", "img": "/images/img-carousel-5.png" },
-    { "id": 3, "name": "Aparajita Jha", "img": "/images/img-carousel-3.png" }
-   
+    {
+      "id": 1,
+      "name": "Ritika Kumar",
+      "img": "/images/img-carousel-8.png",
+      "link": "/stories/heart/ritikakumar",
+      "role": "Cardiac Specialist",
+      "ig": "https://www.instagram.com/reel/DAQiprhhCQ1/",
+      "yt": "https://www.youtube.com/embed/oTOvsT8Ydto?si=nXadSm7SQ5XIYwtc",
+      "desc": "Raising awareness about heart health and prevention."
+    },
+    {
+      "id": 2,
+      "name": "Palash Goorha",
+      "img": "/images/img-carousel-5.png",
+      "link": "/stories/heart/palashgoorha",
+      "role": "Heart Surgeon",
+      "ig": "https://www.instagram.com/reel/C3_-ICkJfgu/",
+      "yt": "",
+      "desc": "Specialist in life-saving cardiac surgeries and patient recovery."
+    },
+    {
+      "id": 3,
+      "name": "Aparajita Jha",
+      "img": "/images/img-carousel-3.png",
+      "link": "/stories/heart/aparajitajha",
+      "role": "Cardiovascular Researcher",
+      "ig": "https://www.instagram.com/reel/CwRn6wkrnPw/",
+      "yt": "",
+      "desc": "Researching new treatments for heart diseases."
+    }
   ],
   [
-    { "id": 1, "name": "Viral Pandya", "img": "/images/img-carousel-12.png" }
-   
+    {
+      "id": 1,
+      "name": "Viral Pandya",
+      "img": "/images/img-carousel-12.png",
+      "link": "/stories/spiritual/viralpandya",
+      "role": "Spiritual Mentor",
+      "ig": "https://www.instagram.com/reel/DHdzgguha0F/",
+      "yt": "",
+      "desc": "Helping people find peace and purpose through spiritual teachings."
+    }
   ]
 ]

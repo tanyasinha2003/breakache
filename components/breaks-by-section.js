@@ -1,6 +1,7 @@
 // components/BreaksBySection.js
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const fallbackNames = [
   { id: 1, name: "Abhiroopa Mathur", img: "/images/img-carousel-1.png" },
@@ -76,6 +77,7 @@ export default function BreaksBySection({ category = "CAREER", names = fallbackN
               onMouseEnter={() => setActiveIndex(index)}
               onMouseLeave={() => setActiveIndex(null)}
             >
+            {/* <Link href={person.link}> */}
               <h2
                 className={`text-[3rem] lg:text-[5rem] font-light cursor-pointer relative z-20 ${
                   activeIndex === index ? `lg:text-black ` : `lg:text-gray-500  text-black `
@@ -83,6 +85,8 @@ export default function BreaksBySection({ category = "CAREER", names = fallbackN
               >
                 {person.name}
               </h2>
+
+              {/* </Link> */}
               <div className="h-[2px] w-[10%] bg-gray-300 mt-2"></div>
             </div>
           ))}
