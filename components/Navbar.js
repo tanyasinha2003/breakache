@@ -64,8 +64,8 @@ export default function Navbar() {
         </div>
 
         {/* Links for desktop */}
-        <div className="hidden lg:flex flex-col space-y-4 justify-content-end pr-16">
-        <Link
+        <div className="hidden lg:flex flex-col space-y-4 justify-content-end pr-16 ">
+          <Link
             href="/"
             className="black-text uppercase text-right text-l font-light"
           >
@@ -90,6 +90,12 @@ export default function Navbar() {
             Participate
           </Link>
           <Link
+            href="/studio"
+            className="black-text uppercase text-right text-l font-light"
+          >
+            Studio
+          </Link>
+          <Link
             href="/socials"
             className="black-text uppercase text-right text-l font-light"
           >
@@ -109,10 +115,10 @@ export default function Navbar() {
             className="fixed top-[7rem] right-0 h-[90vh] w-screen bg-white z-20  lg:hidden flex flex-col"
           >
             <div className="flex flex-col space-y-2 items-start items-center ">
-            <Link
+              <Link
                 href="/"
                 onClick={toggleMenu}
-                className="text-dark-gray text-[3rem]  lowercase text-right font-light"
+                className="text-dark-gray text-[2.5rem]  lowercase text-right font-light"
               >
                 home
               </Link>
@@ -120,7 +126,7 @@ export default function Navbar() {
               <Link
                 href="/aboutus"
                 onClick={toggleMenu}
-                className="text-dark-gray text-[3rem]  lowercase text-right font-light"
+                className="text-dark-gray text-[2.5rem]  lowercase text-right font-light"
               >
                 About Us
               </Link>
@@ -128,7 +134,7 @@ export default function Navbar() {
               <Link
                 href="/#stories"
                 onClick={toggleMenu}
-                className="text-dark-gray text-[3rem]  lowercase text-right font-light"
+                className="text-dark-gray text-[2.5rem]  lowercase text-right font-light"
               >
                 Stories
               </Link>
@@ -136,9 +142,17 @@ export default function Navbar() {
               <Link
                 href="/participate"
                 onClick={toggleMenu}
-                className="text-dark-gray text-[3rem]  lowercase text-right font-light"
+                className="text-dark-gray text-[2.5rem]  lowercase text-right font-light"
               >
                 Participate
+              </Link>
+              <hr className="border-t-2 border-light-gray w-[10%] mx-auto my-[1.5rem] " />
+              <Link
+                href="/studio"
+                onClick={toggleMenu}
+                className="text-dark-gray text-[2.5rem]  lowercase text-right font-light"
+              >
+                Studio
               </Link>
             </div>
             <div className=" flex flex-col items-start items-center relative">
@@ -146,7 +160,7 @@ export default function Navbar() {
                 src={Logo}
                 alt="logo"
                 height={200}
-                className="absolute top-[-2rem]"
+                className="absolute top-[-2rem] z-[-1]"
               />
 
               <div className="pt-[8rem]">
