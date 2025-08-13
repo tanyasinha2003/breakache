@@ -106,10 +106,7 @@ export default function studioform() {
   return (
     <>
       <Navbar />
-      <div
-        
-        className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-8 px-6"
-      >
+      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-8 px-6">
         {/* Form Section */}
         <div className="flex-1">
           <h1 className="text-2xl font-bold mb-6">Book Your Studio</h1>
@@ -341,9 +338,38 @@ export default function studioform() {
             {/* Submit Button */}
             <button
               type="submit"
-              className="bg-red hover:bg-red-600 text-white px-6 py-3 rounded-lg w-full sm:w-auto"
+              disabled={loading}
+              className={`bg-red hover:bg-red-600 text-white px-6 py-3 rounded-lg w-full sm:w-auto flex items-center justify-center gap-2 ${
+                loading ? "opacity-70 cursor-not-allowed" : ""
+              }`}
             >
-              Submit Booking
+              {loading ? (
+                <>
+                  <svg
+                    className="animate-spin h-5 w-5 text-white"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle
+                      className="opacity-25"
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="currentColor"
+                      strokeWidth="4"
+                    ></circle>
+                    <path
+                      className="opacity-75"
+                      fill="currentColor"
+                      d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                    ></path>
+                  </svg>
+                  Processing...
+                </>
+              ) : (
+                "Submit Booking"
+              )}
             </button>
           </form>
         </div>
@@ -389,8 +415,8 @@ export default function studioform() {
           </p>
         </div>
       </div>
-    
-    {/* custom footer */}
+
+      {/* custom footer */}
       <div>
         <Link href="/studioform">
           <h4 className="text-[3rem] text-center lg:text-[6.2rem] lg:text-left lg:ml-[5rem] lg:mt-[2rem]">

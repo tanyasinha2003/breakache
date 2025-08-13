@@ -43,7 +43,7 @@ export default function studio() {
     {
       title: "Main Stage",
       description:
-        "28×20 ft open floor podcast area, vibrant colours living space with two podcast setups.",
+        "30×15 ft open floor podcast area, vibrant colours living space with two podcast setups.",
     },
     {
       title: "Dynamic Backdrops",
