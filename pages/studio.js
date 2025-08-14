@@ -123,13 +123,16 @@ export default function studio() {
       </div>
 
       <div className=" lg:hidden w-full   ">
-          <video
-            src="/videos/reel1_optimized.mp4" // your file in public folder
-            controls
-            className="w-full h-auto"
-            autoPlay
-          />
-        </div>
+        <video
+          src="/videos/reel1_optimized.mp4" // your file in public folder
+          controls
+          className="w-full h-auto"
+          autoPlay
+          muted
+          loop
+          playsInline
+        />
+      </div>
 
       <section className="bg-white mx-[2rem]  mt-[2rem] mb-[1rem]  lg:mx-[6.5rem] lg:my-[2rem]">
         {/* Main Heading */}
@@ -164,7 +167,6 @@ export default function studio() {
         </div>
 
         {/* Mobile-only video */}
-        
 
         {/* Intro Paragraph */}
         <p className="text-gray-700 leading-relaxed mb-6 text-center">
