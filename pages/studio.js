@@ -124,7 +124,7 @@ export default function studio() {
 
       <div className=" lg:hidden w-full   ">
           <video
-            src="/videos/reel1.mp4" // your file in public folder
+            src="/videos/reel1_optimized.mp4" // your file in public folder
             controls
             className="w-full h-auto"
             autoPlay
