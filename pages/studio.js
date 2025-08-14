@@ -11,10 +11,9 @@ import s4 from "../public/images/s4.png";
 import s5 from "../public/images/s5.png";
 import s6 from "../public/images/s6.png";
 
-import s7 from "../public/images/s7.png";
-
 import filmelogo from "../public/images/filme-logo.png";
 
+import filmelogowhite from "../public/images/filme-logo-white.png";
 
 import banner from "../public/images/studio-banner.png";
 
@@ -27,8 +26,21 @@ import LeftHeart from "../public/images/left-heart.svg";
 // import heart from "../public/images/join-us-heart.png";
 import RightHeart from "../public/images/right-heart.svg";
 import Link from "next/link";
+import Carousel from "../components/carousel";
+
+import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/solid"; // install @heroicons/react if not already
 
 export default function studio() {
+  const [openIndexes, setOpenIndexes] = useState([]);
+
+  const toggleFeature = (index) => {
+    setOpenIndexes(
+      (prev) =>
+        prev.includes(index)
+          ? prev.filter((i) => i !== index) // close
+          : [...prev, index] // open
+    );
+  };
   const [joined, setJoined] = useState(false);
 
   const handleJoin = () => {
@@ -68,48 +80,91 @@ export default function studio() {
     },
   ];
 
+  const sampleImages = [
+    {
+      src: "/images/s1.png",
+      alt: "Beautiful landscape",
+    },
+    {
+      src: "/images/s2.png",
+      alt: "City skyline",
+    },
+    {
+      src: "/images/s3.png",
+      alt: "Beach sunset",
+    },
+    {
+      src: "/images/s4.png",
+      alt: "Beach sunset",
+    },
+    {
+      src: "/images/s5.png",
+      alt: "Beach sunset",
+    },
+    {
+      src: "/images/s6.png",
+      alt: "Beach sunset",
+    },
+  ];
+
   const router = useRouter();
   return (
     <>
       <Navbar />
-      <div className="lg:mx-[6.5rem] mx-[2rem] flex items-center gap-2 ">
+      <div className="hidden lg:flex lg:mx-[6.5rem] mx-[2rem] flex items-center gap-2 ">
         <h1 className="uppercase text-dark-gray font-bold text-lg md:text-xl">
           <span className="text-red">Filme</span> Studio
         </h1>
         <Image src={heart} width={50} height={50} alt="Heart" />
       </div>
 
-      <section className="bg-white  mx-[2rem] my-[1rem]  lg:mx-[6.5rem] lg:my-[2rem]">
+      <div className="lg:hidden flex absolute top-[4rem] left-[2.5rem]">
+        <Image src={filmelogowhite} width={300} height={200} alt="Heart" />
+      </div>
+
+      <div className=" lg:hidden w-full   ">
+          <video
+            src="/videos/reel1.mp4" // your file in public folder
+            controls
+            className="w-full h-auto"
+            autoPlay
+          />
+        </div>
+
+      <section className="bg-white mx-[2rem]  mt-[2rem] mb-[1rem]  lg:mx-[6.5rem] lg:my-[2rem]">
         {/* Main Heading */}
-        <h1 className="text-[1rem] md:text-[1.5rem]  text-gray-900 mb-4 text-center">
+        <h1 className="text-[2rem] md:text-[1.5rem]  text-gray-900 mb-4 text-center">
           <span className="text-dark-gray italic font-light ">
             A Creator’s Playground, Built by Storytellers
           </span>
         </h1>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4  lg:mx-[6.5rem] mx-[2rem] pb-[4rem]">
+        <div className="hidden lg:flex grid grid-cols-1 lg:grid-cols-3 gap-4  lg:mx-[6.5rem] mx-[2rem] pb-[4rem]">
           <Image
             src={s1}
             alt="Image 1"
-            width={500}
+            width={300}
             height={300}
             className="w-full h-auto object-cover"
           />
           <Image
             src={s5}
             alt="Image 2"
-            width={500}
+            width={300}
             height={300}
             className="w-full h-auto object-cover"
           />
           <Image
             src={s2}
             alt="Image 3"
-            width={500}
+            width={300}
             height={300}
             className="w-full h-auto object-cover"
           />
         </div>
+
+        {/* Mobile-only video */}
+        
 
         {/* Intro Paragraph */}
         <p className="text-gray-700 leading-relaxed mb-6 text-center">
@@ -117,11 +172,11 @@ export default function studio() {
           <span className="font-semibold">Filme Studio</span>. Breakache podcast
           is reaching people globally in the storytelling space. We thought of
           extending it to many more people who would like to do their own
-          podcast in the most dynamic way. We have built Filme Studio with our
-          knowledge and expertise of 20 years professionally in advertising
-          communication handling various films, brand campaigns for
-          larger-than-life brands — and we know what it takes to produce a piece
-          of 30 seconds.
+          podcast in the most dynamic way.<br></br>
+          <br></br> We have built Filme Studio with our knowledge and expertise
+          of 20 years professionally in advertising communication handling
+          various films, brand campaigns for larger-than-life brands — and we
+          know what it takes to produce a piece of 30 seconds.
         </p>
       </section>
 
@@ -130,16 +185,32 @@ export default function studio() {
           <h2 className="text-3xl font-bold mb-8 text-center">
             Studio Features
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="bg-gray-100 p-6 rounded-xl shadow-sm hover:shadow-md transition"
-              >
-                <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                <p className="text-gray-700">{feature.description}</p>
-              </div>
-            ))}
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {features.map((feature, index) => {
+              const isOpen = openIndexes.includes(index);
+              return (
+                <div
+                  key={index}
+                  className="bg-gray-100 px-6 py-4 rounded-xl shadow-sm hover:shadow-md transition"
+                >
+                  <div className="flex justify-between items-center">
+                    <h3 className="text-xl font-semibold">{feature.title}</h3>
+                    <button onClick={() => toggleFeature(index)}>
+                      {isOpen ? (
+                        <ChevronUpIcon className="w-5 h-5 text-gray-600" />
+                      ) : (
+                        <ChevronDownIcon className="w-5 h-5 text-gray-600" />
+                      )}
+                    </button>
+                  </div>
+
+                  {isOpen && (
+                    <p className="mt-2 text-gray-700">{feature.description}</p>
+                  )}
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -165,7 +236,15 @@ export default function studio() {
         <span className="text-red">Space</span>{" "}
       </h4>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4  lg:mx-[6.5rem] mx-[2rem] pb-[4rem]">
+      <div className="lg:hidden my-[2rem]">
+        <Carousel
+          images={sampleImages}
+          delay={3000}
+          className="w-[24rem] h-[24rem]  "
+        />
+      </div>
+
+      <div className="hidden lg:grid grid grid-cols-1 lg:grid-cols-2 gap-4  lg:mx-[6.5rem] mx-[2rem] pb-[4rem]">
         <Image
           src={s1}
           alt="Image 1"
@@ -271,13 +350,14 @@ export default function studio() {
 
         {/* Contact Info */}
         <div className="flex flex-col justify-center mx-auto my-[4rem] items-center">
-          <div className="lg:mx-[6.5rem] mx-[2rem] flex items-center gap-2 ">
+          <div className="hidden lg:flex lg:mx-[6.5rem] mx-[2rem] flex items-center gap-2 ">
             {/* <h1 className="uppercase text-dark-gray font-bold text-lg md:text-xl">
                     <span className="text-red">Filme</span> Studio
                   </h1> */}
             <Image src={filmelogo} width={200} height={100} alt="Heart" />
           </div>
-          <p className="text-center text-[1.5rem] mx-[2rem] ">
+          <h3 className="text-red uppercase font-bold">Address</h3>
+          <p className="text-center text-[1rem] lg:text-[1.5rem] mx-[2rem] ">
             {" "}
             J-8/10 <span className="text-dark-gray">(Basement)</span>,<br></br>{" "}
             DLF Phase 2, Sector 25,<br></br> Gurugram, Haryana 122002

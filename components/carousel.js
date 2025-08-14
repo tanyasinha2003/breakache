@@ -15,7 +15,7 @@ import {
 } from "swiper/modules";
 import Image from "next/image"; // Next.js Image component
 
-export default function Carousel({ images, delay }) {
+export default function Carousel({ images, delay, mw="12rem", mh="15rem", className }) {
   return (
     <>
       <Swiper
@@ -36,7 +36,7 @@ export default function Carousel({ images, delay }) {
           delay: delay,
           disableOnInteraction: false,
         }}
-        className="mySwiper2 w-[12rem] h-[15rem] lg:w-[18rem] lg:h-[23rem]"
+        className={className ? `mySwiper2 ${className} lg:w-[18rem] lg:h-[23rem]` : `mySwiper2 w-[12rem] h-[15rem] lg:w-[18rem] lg:h-[23rem]`}
         loop={true}
         pagination={{
           dynamicBullets: true, // Enable dynamic bullets for pagination
