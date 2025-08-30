@@ -29,6 +29,7 @@ import Link from "next/link";
 import Carousel from "../components/carousel";
 
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/solid"; // install @heroicons/react if not already
+import FloatingWhatsappButton from "../components/FloatingWhatsappButton";
 
 export default function studio() {
   const [openIndexes, setOpenIndexes] = useState([]);
@@ -465,6 +466,8 @@ export default function studio() {
           ©2024 Breakache. All rights reserved.
         </p>
       </div>
+
+      <FloatingWhatsappButton />
     </>
   );
 }
