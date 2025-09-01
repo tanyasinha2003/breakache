@@ -1,0 +1,17 @@
+# Standard robots.txt for breakache.co
+
+# Allow ChatGPT crawler
+User-agent: GPTBot
+Allow: /
+
+# Allow Googlebot and Bingbot
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Block bad bots (optional cleanup)
+User-agent: *
+Disallow: /wp-admin/
+Disallow: /private/
